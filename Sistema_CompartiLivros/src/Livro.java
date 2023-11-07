@@ -2,7 +2,7 @@
  *
  * @author Melissa
  */
-public class Livro {
+public class Livro implements emprestavel{
     private int id;
     private String nome;
     private String autor;
@@ -46,6 +46,10 @@ public class Livro {
     public void setEditora(String editora) {
         this.editora = editora;
     }
-    
+
+    @Override
+    public void emprestar() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
 }
