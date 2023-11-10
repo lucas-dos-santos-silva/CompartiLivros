@@ -1,5 +1,7 @@
-package Testes;
+package testeCarteirinha;
 
+import Sistema.Carteirinha;
+import java.util.ArrayList;
 import javax.swing.JTextField;
 
 /*
@@ -47,13 +49,12 @@ public class MenuCarteirinha extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         tfdCComplemento = new javax.swing.JTextField();
         btnCConfirmar = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
         jMenuItem2.setText("jMenuItem2");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -125,55 +126,45 @@ public class MenuCarteirinha extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel10.setText("CompartiLivros");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tfdCRua, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(41, 41, 41)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel6)
-                                .addComponent(tfdCNome, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tfdCCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel6)
+                        .addComponent(tfdCNome, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfdCCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnCConfirmar, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnCConfirmar, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(tfdCNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(tfdCNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(1, 1, 1)
-                                                        .addComponent(jLabel8)))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel9)
-                                                    .addComponent(tfdCComplemento)))
-                                            .addComponent(tfdCTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel4))
-                                        .addGap(171, 171, 171)))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(132, 132, 132)
-                            .addComponent(jLabel10))))
-                .addContainerGap(51, Short.MAX_VALUE))
+                                                .addGap(1, 1, 1)
+                                                .addComponent(jLabel8)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(tfdCComplemento)))
+                                    .addComponent(tfdCTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4))
+                                .addGap(171, 171, 171)))))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
@@ -203,12 +194,26 @@ public class MenuCarteirinha extends javax.swing.JFrame {
                 .addComponent(tfdCTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnCConfirmar)
-                .addGap(38, 38, 38))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    private Carteirinha cadastraCarteirinha(){
+//        ArrayList<Carteirinha> carteirinhas = new ArrayList<Carteirinha>();
+        
+        String nomeC = this.tfdCNome.getText();
+        String cpfC = this.tfdCCpf.getText();
+        String ruaC = this.tfdCRua.getText();
+        String numeroC = this.tfdCNumero.getText();
+        String complementoC = this.tfdCComplemento.getText();
+        String telefoneC = this.tfdCTelefone.getText();
+        
+        Carteirinha leitor = new Carteirinha(1, nomeC, telefoneC, ruaC, cpfC);
+//        
+        return leitor;
+    }
     private void tfdCNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfdCNomeActionPerformed
         
     }//GEN-LAST:event_tfdCNomeActionPerformed
@@ -230,13 +235,6 @@ public class MenuCarteirinha extends javax.swing.JFrame {
     }//GEN-LAST:event_tfdCRuaActionPerformed
 
     private void btnCConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCConfirmarActionPerformed
-        String nomeC = this.tfdCNome.getText();
-        String cpfC = this.tfdCCpf.getText();
-        String ruaC = this.tfdCRua.getText();
-        String numeroC = this.tfdCNumero.getText();
-        String complementoC = this.tfdCComplemento.getText();
-        String telefoneC = this.tfdCTelefone.getText();
-        System.out.println(nomeC+","+cpfC+","+ruaC+","+numeroC+","+complementoC+","+telefoneC);
         
     }//GEN-LAST:event_btnCConfirmarActionPerformed
 
@@ -279,7 +277,6 @@ public class MenuCarteirinha extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCConfirmar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
