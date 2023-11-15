@@ -8,18 +8,48 @@ public class Carteirinha {
     private int id;
     private String nome;
     private String telefone;
-    private String endereco;
+    private String rua;
+    private String numero;
+    private String complemento;
     private String cpf;
     private Emprestimo emprestimo;
 
-    public Carteirinha(int id, String nome, String telefone, String endereco, String cpf) {
+    public Carteirinha(int id, String nome, String telefone, String rua, String numero, String complemento, String cpf) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
         this.cpf = cpf;
         this.emprestimo = emprestimo;
     }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    
 
     public int getId() {
         return id;
@@ -43,14 +73,6 @@ public class Carteirinha {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
 
     public String getCpf() {

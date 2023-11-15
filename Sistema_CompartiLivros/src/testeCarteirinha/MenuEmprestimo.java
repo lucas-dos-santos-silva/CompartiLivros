@@ -6,6 +6,8 @@ package testeCarteirinha;
 
 import Sistema.Carteirinha;
 import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -18,8 +20,22 @@ public class MenuEmprestimo extends javax.swing.JFrame {
      */
     public MenuEmprestimo() {
         initComponents();
+        listarCombo();
     }
-
+    public void listarCombo(){
+        List<Carteirinha> carteirinhas = new ArrayList<Carteirinha>();
+        carteirinhas.add(new Carteirinha(1, "Lucas", "4499999999", "Rua das Flores","414","casab", "021213325"));
+        carteirinhas.add(new Carteirinha(2, "Melissa", "4499888888","Rua das Flores","414","casab", "31353625"));
+                
+//        cbELivro.DefaultComboBoxModel lista = new DefaultComboBoxModel<>();
+        for (Carteirinha carteirinha : carteirinhas){
+            String getnome = carteirinha.getNome();
+            cbECarteirinha.addItem(getnome);
+        }
+        
+        
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,7 +83,6 @@ public class MenuEmprestimo extends javax.swing.JFrame {
         });
 
         cbECarteirinha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        cbECarteirinha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbECarteirinha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbECarteirinhaActionPerformed(evt);
@@ -167,8 +182,7 @@ public class MenuEmprestimo extends javax.swing.JFrame {
     }//GEN-LAST:event_cbELivroActionPerformed
 
     private void cbECarteirinhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbECarteirinhaActionPerformed
-      
-      
+        
     }//GEN-LAST:event_cbECarteirinhaActionPerformed
 
     private void tfdEDataDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfdEDataDevolucaoActionPerformed
